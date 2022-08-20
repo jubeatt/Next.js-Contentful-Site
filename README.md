@@ -4,7 +4,7 @@
 
 我覺得這是一堂蠻不錯的課，建議有興趣的人可以到連結中參考看看。
 
-網站連結：
+網站連結：https://next-js-contentful-site-tau.vercel.app/
 
 ## 網站介紹
 

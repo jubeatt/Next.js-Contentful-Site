@@ -9,10 +9,12 @@ export default function Layout({ children }) {
 
   useEffect(() => {
     function onRouteChangeStart() {
+      console.log('onRouteChangeStart')
       setLoading(true)
     }
 
     function onRouteChangeComplete() {
+      console.log('onRouteChangeComplete')
       setLoading(false)
     }
 
@@ -26,12 +28,15 @@ export default function Layout({ children }) {
     router.events.on('routeChangeError', onRouteChangeError)
 
     return () => {
-      console.log('clear')
       router.events.off('routeChangeStart', onRouteChangeStart)
       router.events.off('routeChangeComplete', onRouteChangeComplete)
       router.events.off('routeChangeError', onRouteChangeError)
     }
   }, [])
+
+  useEffect(() => {
+    console.log('loading', loading)
+  }, [loading])
 
   return (
     <div className='layout'>
