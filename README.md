@@ -16,6 +16,8 @@
 - 上傳食譜圖片
 - 利用 Contentful 提供服務來更有效的撰寫內容
 
+![demo](demo.gif)
+
 ## 使用的技術
 
 - React
