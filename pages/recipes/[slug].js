@@ -31,21 +31,24 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
-      recipe: response.items
+      recipe: response.items[0]
     },
     revalidate: 1
   }
 }
 
 export default function RecipeDetails({ recipe }) {
-  const { title, cookingTime, featureImage, ingredients, method } = recipe[0].fields
+  if (!recipe) {
+    return (
+      <>
+        <Skeleton />
+        <Skeleton />
+      </>
+    )
+  }
+  const { title, cookingTime, featureImage, ingredients, method } = recipe.fields
 
-  return recipe.length === 0 ? (
-    <>
-      <Skeleton />
-      <Skeleton />
-    </>
-  ) : (
+  return (
     <div>
       <div className='banner'>
         <Image
