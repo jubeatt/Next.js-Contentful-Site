@@ -14,7 +14,7 @@
 - 修改食譜內容
 - 刪除食譜
 - 上傳食譜圖片
-- 利用 Contentful 提供服務來更有效的撰寫內容
+- 利用 Contentful 提供的服務來更有效的撰寫內容
 
 ![demo](demo.gif)
 
@@ -37,7 +37,7 @@
 npm install
 ```
 
-2\. 建立 `.env.local` 輸入自己的 key & access token：
+2\. 建立 `src/.env.local`，並輸入自己的 key & access token：
 
 ```
 CONTENTFUL_SPACE_ID=your_space_id
